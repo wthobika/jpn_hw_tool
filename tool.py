@@ -132,7 +132,7 @@ def create_hws_with_dates():
             pg_num = hw[i] + FOREWARD_OFFSET
             writer.add_page(reader.pages[pg_num])
         due_date = hw[0]
-        due_date = due_date.replace('/', '-') #mac doesnt allow / in filenames
+        due_date = due_date.replace('/', '-') # '/' not allowed in filenames
         title = f"hws/jpn_hw_{due_date}.pdf"
         with open(title, "wb") as pdf:
             writer.write(pdf)
